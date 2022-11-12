@@ -1,0 +1,69 @@
+{
+  "scripts": {
+    "examples": "docusaurus-examples",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider docusaurus start",
+    "start:prod": "serve build",
+    "build": "docusaurus build",
+    "publish-gh-pages": "docusaurus-publish",
+    "write-translations": "docusaurus-write-translations",
+    "version": "docusaurus docs:version",
+    "rename-version": "docusaurus-rename-version",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "USE_SSH=true docusaurus deploy",
+    "docusaurus": "docusaurus"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.2.0",
+    "@tsconfig/docusaurus": "^1.0.6",
+    "@types/react": "17.0.52",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-helmet": "^6.1.5",
+    "@types/react-router-dom": "^5.3.3",
+    "serve": "14.1.0",
+    "webpack": "^5.74.0"
+  },
+  "dependencies": {
+    "@anansi/browserslist-config": "1.4.1",
+    "@anansi/webpack-config": "13.0.25",
+    "@docusaurus/core": "2.2.0",
+    "@docusaurus/plugin-client-redirects": "2.2.0",
+    "@docusaurus/plugin-content-docs": "2.2.0",
+    "@docusaurus/preset-classic": "2.2.0",
+    "@docusaurus/theme-live-codeblock": "2.2.0",
+    "@docusaurus/theme-mermaid": "^2.2.0",
+    "@monaco-editor/react": "^4.4.6",
+    "@rest-hooks/endpoint": "file:../packages/endpoint",
+    "@rest-hooks/graphql": "file:../packages/graphql",
+    "@rest-hooks/hooks": "file:../packages/hooks",
+    "@rest-hooks/rest": "file:../packages/rest",
+    "@rest-hooks/test": "file:../packages/test",
+    "bignumber.js": "9.1.0",
+    "clsx": "1.2.1",
+    "monaco-editor": "^0.34.1",
+    "msw": "0.40.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-json-tree": "0.17.0",
+    "react-live": "^3.1.1",
+    "rest-hooks": "file:../packages/rest-hooks",
+    "typescript": "next"
+  },
+  "resolutions": {
+    "@rest-hooks/core": "file:../packages/core",
+    "@rest-hooks/normalizr": "file:../packages/normalizr",
+    "@rest-hooks/use-enhanced-reducer": "file:../packages/use-enhanced-reducer",
+    "@rest-hooks/endpoint": "file:../packages/endpoint",
+    "@rest-hooks/hooks": "file:../packages/hooks",
+    "@rest-hooks/graphql": "file:../packages/graphql",
+    "@rest-hooks/rest": "file:../packages/rest",
+    "@rest-hooks/test": "file:../packages/test"
+  },
+  "msw": {
+    "workerDirectory": "static"
+  },
+  "browserslist": [
+    "extends @anansi/browserslist-config",
+    "last 1 years"
+  ],
+  "packageManager": "yarn@3.2.4"
+}

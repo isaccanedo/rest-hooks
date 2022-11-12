@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`optional members should infer a detail based on list results 1`] = `
+Some {
+  "id": "1",
+  "name": "fails",
+  "things": [],
+}
+`;
+
+exports[`optional members should infer even with nested missing 1`] = `
+{
+  "a": Some {
+    "id": "2",
+    "name": "works",
+    "things": [
+      Nested {
+        "id": "1",
+        "name": "first",
+      },
+      Nested {
+        "id": "2",
+        "name": "second",
+      },
+    ],
+  },
+  "b": Nested {
+    "id": "2",
+    "name": "second",
+  },
+}
+`;
+
+exports[`optional members should return all members of list without suspending 1`] = `
+[
+  Some {
+    "id": "1",
+    "name": "fails",
+    "things": [],
+  },
+  Some {
+    "id": "2",
+    "name": "works",
+    "things": [
+      Nested {
+        "id": "1",
+        "name": "first",
+      },
+      Nested {
+        "id": "2",
+        "name": "second",
+      },
+    ],
+  },
+  Some {
+    "id": "3",
+    "name": "works",
+    "things": [
+      Nested {
+        "id": "2",
+        "name": "second",
+      },
+    ],
+  },
+]
+`;

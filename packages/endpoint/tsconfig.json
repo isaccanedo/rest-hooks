@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig-base",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src",
+    "skipLibCheck": false
+  },
+  "include": ["src", "typescript-tests"],
+  "references": [{ "path": "../../__tests__" }]
+}

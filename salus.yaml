@@ -1,0 +1,12 @@
+scanner_configs:
+  YarnAudit:
+    exclude_groups:
+    - devDependencies
+active_scanners:
+  - RepoNotEmpty
+  - Brakeman
+  - BundleAudit
+  - PatternSearch
+  - Gosec
+  - NPMAudit
+  - NodeAudit

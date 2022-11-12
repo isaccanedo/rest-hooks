@@ -1,0 +1,88 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 2.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  /*margin-bottom: 10px;*/
+
+  background: linear-gradient(
+      transparent 212px,
+      var(--ifm-hero-fade-to-background-color) 100%
+    ),
+    url('../../static/img/rest_hooks_logo_grayscale.svg')
+      var(--ifm-hero-background-color) no-repeat;
+  background-position: 0, 100% calc(20% - 3rem);
+
+  /* overlap */
+  padding-bottom: 14.5rem;
+  margin-bottom: -12rem;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+    padding-bottom: 14rem;
+    margin-bottom: -12rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons :global(.button.button--primary) {
+  font-size: 21px;
+  padding: 0.2em 1.3em;
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  margin: 0 36px;
+}
+
+.GitHubButtonWrapper {
+  display: flex;
+}
+
+.GitHubButton {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons :global(.button.button--primary) {
+    margin: 0 0 15px 0;
+  }
+  .logoWrapper {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .buttons :global(.button.button--primary) {
+    font-size: 20px;
+    padding: 0.2em 1.1em;
+  }
+  .GitHubButtonWrapper {
+    transform: scale(80%);
+  }
+}
+
+:global(.main-wrapper) > main {
+  z-index: 1;
+  position: relative;
+}

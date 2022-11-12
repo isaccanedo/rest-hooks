@@ -1,0 +1,298 @@
+.playgroundContainer {
+  margin-bottom: var(--ifm-leading);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  overflow: visible;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  background-color: var(--ifm-background-color);
+}
+.playgroundContainer .playgroundHeader.tabControls:first-of-type {
+  border-top-left-radius: var(--ifm-global-radius);
+  overflow: hidden;
+}
+.playgroundContainer.row > :last-child {
+  overflow: hidden;
+  border-top-right-radius: var(--ifm-global-radius);
+  border-bottom-right-radius: var(--ifm-global-radius);
+}
+.playgroundContainer:not(.row) > :last-child {
+  overflow: hidden;
+  border-bottom-left-radius: var(--ifm-global-radius);
+  border-bottom-right-radius: var(--ifm-global-radius);
+}
+@media only screen and (min-width: 768px) {
+  .playgroundContainer.row {
+    flex-direction: row;
+  }
+}
+.playgroundContainer.row .hidden {
+  display: none;
+}
+
+.playgroundContainer > div {
+  flex: 1 1 auto;
+}
+.playgroundContainer > div:first-child {
+  flex: 0 0 70%;
+}
+.row.playgroundContainer > div:first-child {
+  background-color: var(--monoco-code-background);
+  border-bottom-left-radius: var(--ifm-global-radius);
+  border-top-left-radius: calc(var(--ifm-global-radius) * 2);
+}
+
+.playgroundHeader {
+  letter-spacing: 0.08rem;
+  padding: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content);
+  font-size: var(--ifm-code-font-size);
+}
+.playgroundHeader.small {
+  text-transform: none;
+  font-size: 80%;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+}
+.playgroundHeader.clickable {
+  cursor: pointer;
+}
+.playgroundHeader.clickable:hover {
+  background-color: var(--ifm-color-emphasis-500);
+}
+.playgroundHeader.noupper {
+  text-transform: none;
+}
+
+body {
+  --ifm-color-playground-tab-selected: var(--ifm-color-emphasis-300);
+}
+
+div:first-of-type > .playgroundHeader {
+  background: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-content-inverse);
+}
+.playgroundContainer:not(.row)
+  > div:first-of-type
+  > .playgroundHeader:first-child {
+  border-top-right-radius: var(--ifm-global-radius);
+  border-top-left-radius: var(--ifm-global-radius);
+}
+div > .playgroundHeader.subtabs {
+  color: var(--ifm-color-content);
+  background: var(--ifm-color-playground-tab-selected);
+}
+
+.playgroundEditor {
+  /*rtl:ignore*/
+  direction: ltr;
+  height: 100%;
+  padding-top: 8px;
+}
+.playgroundEditor :global(.prism-code) {
+  border-radius: 0;
+  background: transparent;
+  padding-top: 0 !important;
+}
+.playgroundEditor,
+.playgroundEditor :global(.prism-code) {
+  font: 13px / 19px var(--ifm-font-family-monospace) !important;
+}
+.playgroundContainer:not(.row) {
+  background-color: var(--monoco-code-background);
+}
+.closed {
+  display: none;
+}
+
+.arrow {
+  transition: all 200ms ease 0s;
+  transform-origin: 45% 50% 0px;
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 1em;
+}
+.arrow.vertical {
+  float: right;
+  margin-right: 0;
+}
+.arrow.right {
+  transform: rotateZ(0deg);
+}
+.arrow.left {
+  transform: rotateZ(180deg);
+}
+.arrow.up {
+  transform: rotateZ(270deg);
+}
+.arrow.down {
+  transform: rotateZ(90deg);
+}
+
+:global(.col) .playgroundPreview {
+  padding: 1rem;
+  background-color: var(--ifm-pre-background);
+  flex: 1 4 20%;
+  overflow: auto;
+}
+:global(.col) .playgroundError {
+  overflow: visible;
+  padding: 0;
+  color: var(--ifm-color-danger-contrast-foreground);
+  white-space: pre-wrap;
+}
+
+.playgroundResult {
+  display: flex;
+  height: 100%;
+}
+
+.debugToggle {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content);
+  font-size: var(--ifm-code-font-size);
+  padding: 0.7em 0.1em 1em 0.1em;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.debugToggle:hover {
+  background-color: var(--ifm-color-emphasis-300);
+}
+
+.playgroundContainer.row.hidden,
+.hidden {
+  display: none;
+}
+
+/* tabs */
+.playgroundHeader.tabControls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.playgroundHeader.tabControls .title {
+  padding: 0.75rem;
+}
+
+/* live editor v3 */
+:global(.prism-code) {
+  height: 100%;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  height: 100%;
+  padding: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.tab:hover {
+  background-color: var(--ifm-color-emphasis-700);
+}
+
+.tab.selected {
+  background-color: var(--ifm-color-playground-tab-selected);
+  color: var(--ifm-color-content);
+}
+.subtabs .tab.selected {
+  background-color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-content-inverse);
+}
+.subtabs .tab.selected:hover {
+  background-color: var(--ifm-color-emphasis-600);
+}
+.subtabs .tab {
+  padding: 0.4rem 0.75rem;
+}
+.subtabs .tab:hover {
+  background-color: var(--ifm-color-emphasis-400);
+}
+
+.playgroundPreview button {
+  margin-bottom: 8px;
+  margin-right: 8px;
+  padding: 2px 6px;
+}
+
+.fixtureBlock {
+  background-color: var(--prism-background-color);
+  font: var(--ifm-code-font-size) / var(--ifm-pre-line-height)
+    var(--ifm-font-family-monospace);
+  color: rgb(191, 199, 213);
+  padding: 8px;
+}
+.fixtureItem {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.fixtureHeader {
+  color: rgb(195, 232, 141);
+  font: var(--ifm-code-font-size) / var(--ifm-pre-line-height)
+    var(--ifm-font-family-monospace);
+  flex: 0 0 auto;
+}
+div.fixtureJson {
+  margin-bottom: 0;
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+.fixtureJson code {
+  padding: 0;
+  margin: 0;
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.playgroundEditor :global(.monaco-editor) {
+  --monaco-monospace-font: var(--ifm-font-family-monospace);
+}
+
+.playgroundEditor :global(.monaco-editor),
+.playgroundEditor :global(.monaco-editor-background),
+.playgroundEditor :global(.monaco-editor) :global(.margin),
+:global(.monaco-editor) :global(.inputarea.ime-input) {
+  background-color: var(--monoco-code-background);
+}
+.playgroundContainer.row .playgroundEditor :global(.monaco-editor),
+.playgroundContainer.row .playgroundEditor :global(.monaco-editor-background),
+.playgroundContainer.row
+  .playgroundEditor
+  :global(.monaco-editor)
+  :global(.margin),
+.playgroundContainer.row :global(.monaco-editor) :global(.inputarea.ime-input) {
+  border-bottom-left-radius: var(--ifm-global-radius);
+}
+.playgroundEditor
+  :global(.monaco-editor)
+  :global(.view-overlays)
+  :global(.current-line) {
+  border-color: var(--monoco-code-lineHighlightBorder);
+}
+
+/* override bad loading styles for monaco editor */
+.playgroundEditor > section > div {
+  display: block !important;
+}
+.playgroundEditor > section > div:not(:first-child) {
+  width: 0;
+  flex: 0 0 0;
+}
+.playgroundEditor > section {
+  position: auto !important;
+}

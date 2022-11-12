@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+    "emitDeclarationOnly": false,
+    "noImplicitAny": false,
+    "composite": false,
+    "rootDir": "../..",
+    "paths": {
+      "__tests__/*": ["__tests__/*"]
+    }
+  },
+  "include": ["typescript-tests"]
+}

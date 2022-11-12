@@ -1,0 +1,101 @@
+{
+  "name": "@rest-hooks/hooks",
+  "version": "3.0.9",
+  "description": "Collection of composable data hooks",
+  "sideEffects": false,
+  "main": "dist/index.cjs.js",
+  "react-native": "legacy/index.js",
+  "module": "lib/index.js",
+  "unpkg": "dist/index.umd.min.js",
+  "types": "lib/index.d.ts",
+  "typesVersions": {
+    ">=4.0": {
+      "": [
+        "lib/index.d.ts"
+      ],
+      "*": [
+        "lib/index.d.ts"
+      ]
+    },
+    ">=3.4": {
+      "": [
+        "ts3.4/index.d.ts"
+      ],
+      "*": [
+        "ts3.4/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "lib",
+    "ts3.4",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build:lib": "NODE_ENV=production BROWSERSLIST_ENV=2019 ROOT_PATH_PREFIX='@rest-hooks/hooks' babel --root-mode upward src --out-dir lib --source-maps inline --extensions '.ts,.tsx,.js' --ignore '**/__tests__/**' --ignore '**/*.d.ts'",
+    "build:bundle": "rollup -c",
+    "build:clean": "rimraf lib dist ts3.4 *.tsbuildinfo",
+    "build": "yarn run build:lib && yarn run build:bundle",
+    "build:legacy-types": "yarn run downlevel-dts lib ts3.4",
+    "dev": "yarn run build:lib -w",
+    "prepare": "yarn run build:lib",
+    "prepack": "yarn prepare",
+    "prepublishOnly": "yarn run build:bundle"
+  },
+  "keywords": [
+    "hooks",
+    "data",
+    "data layer",
+    "networking",
+    "fetch",
+    "typescript",
+    "data fetching",
+    "data cache",
+    "react-native",
+    "ios",
+    "android",
+    "web",
+    "declarative"
+  ],
+  "author": "Nathaniel Tucker <me@ntucker.me> (https://github.com/ntucker)",
+  "license": "Apache-2.0",
+  "homepage": "https://resthooks.io/docs/api/useDebounce",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:coinbase/rest-hooks.git",
+    "directory": "packages/hooks"
+  },
+  "bugs": {
+    "url": "https://github.com/coinbase/rest-hooks/issues"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.13.0"
+  },
+  "peerDependencies": {
+    "@rest-hooks/endpoint": "^0.6.1 || ^1.0.0-0 || ^2.0.0-0",
+    "@types/react": "^16.8.4 || ^17.0.0 || ^18.0.0-0",
+    "react": "^16.8.4 || ^17.0.0 || ^18.0.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "7.19.3",
+    "@babel/core": "7.20.2",
+    "@types/babel__core": "^7",
+    "downlevel-dts": "^0.10.0",
+    "rollup": "2.79.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

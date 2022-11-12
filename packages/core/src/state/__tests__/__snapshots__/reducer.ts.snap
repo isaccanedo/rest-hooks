@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducer should set error in meta for "receive" 1`] = `
+{
+  "entities": {},
+  "entityMeta": {},
+  "indexes": {},
+  "lastReset": 0,
+  "meta": {
+    "GET http://test.com/article/20": {
+      "date": 5000000000,
+      "error": [Error: hi],
+      "errorPolicy": undefined,
+      "expiresAt": 5000500000,
+    },
+  },
+  "optimistic": [],
+  "results": {},
+}
+`;
+
+exports[`reducer singles should update state correctly 1`] = `
+{
+  "entities": {
+    "Article": {
+      "20": {
+        "content": "this is the content",
+        "id": 20,
+        "title": "hi",
+      },
+    },
+  },
+  "entityMeta": {
+    "Article": {
+      "20": {
+        "date": 5000000000,
+        "expiresAt": 5000500000,
+        "fetchedAt": 5000000000,
+      },
+    },
+  },
+  "indexes": {},
+  "lastReset": 0,
+  "meta": {
+    "http://test.com/article/20": {
+      "date": 5000000000,
+      "expiresAt": 5000500000,
+      "prevExpiresAt": undefined,
+    },
+  },
+  "optimistic": [],
+  "results": {
+    "http://test.com/article/20": "20",
+  },
+}
+`;

@@ -1,0 +1,12 @@
+export { Controller, useController } from '@rest-hooks/core';
+export { default as useSubscription } from './hooks/useSubscription';
+export { default as RestEndpoint } from './rest/RestEndpoint';
+export * from './rest/RestEndpoint';
+export { default as createResource } from './rest/createResource';
+export type { Resource } from './rest/createResource';
+export { default as paginationUpdate } from './rest/paginationUpdate';
+import { schema, Entity, EndpointExtraOptions } from '@rest-hooks/endpoint';
+const Delete = schema.Delete;
+export { Delete, Entity };
+export type { EndpointExtraOptions };
+export * from './rest/types';
