@@ -135,7 +135,7 @@ For the small price of 8kb gziped. &nbsp;&nbsp; [🏁Get started now](https://re
 ### <img src="./website/static/img/fast-car.svg" width="25" height="25"/> Performance
 
 - Stale While Revalidar cache configurável
-- Only re-render
+- Apenas renderizar novamente
 
 ### <img src="./website/static/img/chemical-composition.svg" width="25" height="25"/> Composition over configuration
 
