@@ -40,7 +40,7 @@ class Article extends Entity {
 }
 ```
 
-### Create [collection of API Endpoints](https://resthooks.io/rest/api/createResource)
+### Criar [coleção de endpoints da API](https://resthooks.io/rest/api/createResource)
 
 ```typescript
 const ArticleResource = createResource({
