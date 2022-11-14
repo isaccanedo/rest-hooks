@@ -144,7 +144,7 @@ For the small price of 8kb gziped. &nbsp;&nbsp; [🏁Get started now](https://re
 - Dependências de dados colocalizados;
   - Centralized orchestration
 - Extensible orchestration through Managers (middleware)
-- Composable hooks
+- Ganchos combináveis;
   - subject pattern
 - Suspense + concurrent mode async orchestration
 
