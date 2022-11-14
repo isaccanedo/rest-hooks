@@ -10,7 +10,7 @@
 
 Dados dinâmicos assíncronos em escala. Desempenho, integridade de dados e digitação para [REST](https://resthooks.io/rest), proto, [GraphQL](https://resthooks.io/graphql), [websockets](https://resthooks. io/docs/api/Manager#middleware-data-stream) e [mais](https://resthooks.io/docs/guides/img-media).
 
-Bring structure to your React State.
+Traga estrutura para o seu React State.
 
 <div align="center">
 
