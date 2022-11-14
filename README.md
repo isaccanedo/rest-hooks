@@ -126,11 +126,11 @@ Pelo pequeno preço de 8kb gzipado. &nbsp;&nbsp; [🏁Get started now](https://r
 
 ### ![TS](./packages/rest-hooks/typescript.svg?sanitize=true) Integrity
 
-- Tipos inferidos fortes
-- Global referential equality guarantees
-- Normalized store creates a single source of truth
-- Strong invariants robust against race conditions
-- Validation
+- Tipos inferidos fortes;
+- Global referential equality guarantees;
+- Normalized store creates a single source of truth;
+- Strong invariants robust against race conditions;
+- Validação.
 
 ### <img src="./website/static/img/fast-car.svg" width="25" height="25"/> Performance
 
