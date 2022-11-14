@@ -151,4 +151,4 @@ Pelo pequeno preço de 8kb gzipado. &nbsp;&nbsp; [🏁Get started now](https://r
 ### <img src="./website/static/img/growing-bar-chart.svg" width="25" height="25"/> Incremental Adoption
 
 - Caso simples é simples;
-- Scale as your app scales
+- Dimensione à medida que seu aplicativo é dimensionado.
