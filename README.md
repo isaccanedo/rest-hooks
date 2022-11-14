@@ -126,7 +126,7 @@ For the small price of 8kb gziped. &nbsp;&nbsp; [🏁Get started now](https://re
 
 ### ![TS](./packages/rest-hooks/typescript.svg?sanitize=true) Integrity
 
-- Strong inferred types
+- Tipos inferidos fortes
 - Global referential equality guarantees
 - Normalized store creates a single source of truth
 - Strong invariants robust against race conditions
