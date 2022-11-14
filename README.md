@@ -26,7 +26,7 @@ Traga estrutura para o seu React State.
 
 </div>
 
-### Simple [TypeScript definition](https://resthooks.io/rest/api/Entity)
+### Simples [definição do TypeScript](https://resthooks.io/rest/api/Entity)
 
 ```typescript
 class Article extends Entity {
