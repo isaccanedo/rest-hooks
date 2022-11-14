@@ -8,7 +8,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Chat](https://img.shields.io/discord/768254430381735967.svg?style=flat-square&colorB=758ED3)](https://discord.gg/35nb8Mz)
 
-Dados dinâmicos assíncronos em escala. Performance, data integrity, and typing for [REST](https://resthooks.io/rest), proto, [GraphQL](https://resthooks.io/graphql), [websockets](https://resthooks.io/docs/api/Manager#middleware-data-stream) and [more](https://resthooks.io/docs/guides/img-media).
+Dados dinâmicos assíncronos em escala. Desempenho, integridade de dados e digitação para [REST](https://resthooks.io/rest), proto, [GraphQL](https://resthooks.io/graphql), [websockets](https://resthooks. io/docs/api/Manager#middleware-data-stream) e [mais](https://resthooks.io/docs/guides/img-media).
 
 Bring structure to your React State.
 
