@@ -72,7 +72,7 @@ return (
 );
 ```
 
-### And [subscriptions](https://resthooks.io/docs/api/useSubscription)
+### E [assinaturas](https://resthooks.io/docs/api/useSubscription)
 
 ```tsx
 const price = useSuspense(PriceResource.get, { symbol });
